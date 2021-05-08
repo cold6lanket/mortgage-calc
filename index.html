@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mortgage calc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="part">
+                <div class="row housePrice">
+                    <h3>Стоимость жилья</h3>
+                    <p><input data-index="0" value="0" min="0" max="10000000" type="text" class="inputText"></p>
+                    <input data-index="0" value="0" min="0" max="10000000" type="range" class="inputNum">
+                </div>
+                <div class="row initialFee">
+                    <h3>Первоначальный взнос</h3>
+                    <p><input data-index="1" value="0" min="0" max="10000000" type="text"  class="inputText"></p>
+                    <input data-index="1" value="0" min="0" max="10000000" type="range" class="inputNum">
+                </div>
+            </div>
+            <div class="part2">
+                <div class="row loanRate">
+                    <h3>Ставка кредита, % годовых</h3>
+                    <p><input data-index="2" value="12" min="0" max="20" type="text" class="inputText"></p>
+                    <input data-index="2" value="12" min="0" max="20" type="range" class="inputNum">
+                </div>
+                <div class="row loanTerm">
+                    <h3>Срок кредитования, месяц</h3>
+                    <p><input data-index="3" value="36" min="36" max="360" type="text" class="inputText"></p>
+                    <input data-index="3" value="36" min="36" max="360" type="range" class="inputNum">
+                </div>
+            </div>
+        </div>
+        <div class="result-field">
+            <div class="col col1">
+                <p>Ежемесячный платеж: <span id="priceMonth">__</span> KZT</p>
+            </div>
+            <div class="col col2">
+                <p>Общая стоимость жилья, приобретаемого под ипотеку: <span id="priceOverall">___</span> KZT</p>
+            </div>
+            <div class="col col3">Переплата: <span id="priceOverpayment">___</span> KZT</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
